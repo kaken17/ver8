@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>学校紹介AI VTuber</title>
+  <meta name="description" content="AIキャラクターが学校の魅力を紹介します">
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+  <div class="page">
+    <header class="header">
+      <div class="logo">学</div>
+      <div>
+        <p class="eyebrow">SCHOOL GUIDE AI</p>
+        <h1>学校紹介AIナビ</h1>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="avatar-area">
+        <div id="avatar" class="avatar">
+          <div class="hair">✦</div>
+          <div class="face">
+            <div class="eyes"><span>●</span><span>●</span></div>
+            <div id="mouth" class="mouth"></div>
+          </div>
+          <div class="uniform">◆</div>
+        </div>
+        <p id="avatar-status">あなたの学校案内係</p>
+      </div>
+
+      <div class="hero-text">
+        <span class="tag">WELCOME</span>
+        <h2>学校のこと、<br>何でも聞いてね！</h2>
+        <p>学科・部活動・学校行事など、気になることを質問してください。</p>
+      </div>
+    </section>
+
+    <section class="chat-panel">
+      <h2>💬 学校について質問する</h2>
+
+      <div id="messages" class="messages" aria-live="polite">
+        <div class="bubble ai">
+          こんにちは！学校紹介AIナビです。
+          学校について知りたいことを質問してください。
+        </div>
+      </div>
+
+      <form id="chat-form" class="chat-form">
+        <input
+          id="question"
+          type="text"
+          placeholder="例：どんな部活動がありますか？"
+          autocomplete="off"
+          required
+        >
+        <button id="send-button" type="submit">送信 ➤</button>
+      </form>
+
+      <div class="tools">
+        <button id="stop-button" type="button">■ 音声を停止</button>
+        <span id="status">準備完了</span>
+      </div>
+    </section>
+
+    <footer>
+      AIの回答は参考情報です。入試・学費などは学校の公式資料をご確認ください。
+    </footer>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
